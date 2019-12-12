@@ -1,0 +1,49 @@
+def ask_string(question: str) -> bool:
+    """
+    Pose une question à l'utilisateur, qui doit répondre par oui ou non.
+    :param question: La question à poser à l'utilisateur
+    :return: La réponse utilisateur
+    """
+    while True:
+        user_input = input(question + ' (oui/non, 1/0, o/n)\n> ').lower()
+
+        if user_input in ('o', '1', 'yes', 'oui'):
+            return True
+
+        if user_input in ('n', '0', 'no', 'non'):
+            return False
+
+        print('Réponse incorrecte. Veuillez rentrer : oui/non, 1/0, o/n')
+
+
+def ask_number(mini: int = None, maxi: int = None) -> int:
+    """
+    Demande un nombre à l'utilisateur, situé entre min et max.
+    :param mini: le minimum
+    :param maxi: le maximum
+    :return: le nombre entrée par l'utilisateur
+    """
+    message = 'Veuillez rentrer un nombre:'
+    if mini is not None and maxi is not None:
+        message = f'Veuillez rentrer un nombre entre {mini} et {maxi}:'
+    elif mini is not None and maxi is None:
+        message = f'Veuillez rentrer un nombre supérieur à {mini}:'
+
+    while True:
+        number = input(message + '\n> ')
+
+        # On s'assure que l'utilisateur vient de rentrer un nombre
+        try:
+            # On convertit en nombre base 10
+            number = int(number)
+        except ValueError:
+            print('Valeur incorrecte.')
+            continue
+
+        # Le nombre est désormais un entier. On vérifie qu'il coincide avec les valeurs min/max
+        if mini is not None and number < mini:
+            print(f'Le nombre entré est trop petit. Il doit valoir au moins {mini}')
+        elif maxi is not None and number > maxi:
+            print(f'Le nombre entré est trop grand. Il doit valoir au maximum {maxi}')
+        else:
+            return number

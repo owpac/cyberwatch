@@ -1,0 +1,14 @@
+IP: 8.8.8.8
+Country: United States
+City: None
+Latitude: 37.751000000000005
+Longitude: -97.822
+Hostnames: ['dns.google']
+
+Port: 53
+Service: ldap-udp
+Protocol: udp
+
+Port: 443
+Service: https
+Protocol: tcp
