@@ -33,7 +33,6 @@ Use examples:
   - API: ```$ python3 cyberwatch.py -I api```
   - Protocols: ```$ python3 cyberwatch.py -I protocols```
   - Services: ```$ python3 cyberwatch.py -I services```
-  - Services: <code>./shodan_cmd.py -I services</code>
   
 2. Get info about host and print the output on console.
 
@@ -60,5 +59,5 @@ $ python3 cyberwatch.py -H [host] -pc
 
 6. You can change some configuration option in options.py:
 
-For example, if you want to change some output format, modify LIST_SUB variable with another character.
+For example, if you want to change some output format, modify ```LIST_SUB``` variable with another character.
 
