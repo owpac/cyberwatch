@@ -3,7 +3,7 @@ class Options:
     Configuration file.
     """
 
-    SHODAN_API = "yQYeEjecPKAO0rNsxKUL2ahXsnBHOf0a"
+    SHODAN_API = ""
 
     DIR = './reports'
 
